@@ -77,6 +77,47 @@ When you want to forcefully reload, for example to reset the state of your app, 
 
 You've successfully run and modified your React Native App. :partying_face:
 
+## Custom Components Added
+
+This app includes several custom components demonstrating React Native concepts:
+
+### FlatCards
+- **Location**: `components/FlatCards.tsx`
+- **Features**: Horizontal scrollable cards with different colors
+- **Concepts**: Flexbox layout, ScrollView, dynamic styling, map function
+
+### ElevatedCards
+- **Location**: `components/ElevatedCards.tsx`
+- **Features**: Cards with shadow effects and elevation
+- **Concepts**: Shadow properties (iOS), elevation (Android), gap spacing
+
+### FancyCards
+- **Location**: `components/FancyCards.tsx`
+- **Features**: Cards with images, titles, and descriptions
+- **Concepts**: Image loading, error handling, card layouts, typography
+
+### ActionCard
+- **Location**: `components/ActionCard.tsx`
+- **Features**: Interactive card with external links and TouchableOpacity
+- **Concepts**: Linking API, TouchableOpacity, external URL handling
+
+### ContactList
+- **Location**: `components/ContactList.tsx`
+- **Features**: User profile list with GitHub avatars and status messages
+- **Concepts**: Array mapping, network images, user profiles, list layouts
+
+## Key React Native Concepts Demonstrated
+
+- **SafeAreaView**: Proper handling of device safe areas (notches, status bars)
+- **StyleSheet**: Organized styling with flexbox layout
+- **ScrollView**: Horizontal and vertical scrolling
+- **Image**: Network image loading with error handling
+- **TouchableOpacity**: Interactive button components
+- **Linking**: Opening external URLs and deep links
+- **Flexbox**: Layout management and responsive design
+- **Shadow/Elevation**: Platform-specific shadow effects
+- **Gap Property**: Modern spacing between flex items
+
 ### Now what?
 
 - If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
