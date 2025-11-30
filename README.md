@@ -101,6 +101,20 @@ This app features a navigation-based structure with multiple components:
 - **Features**: Complete password generation utility with customizable options
 - **Concepts**: Form validation with Yup, Formik form management, clipboard integration, keyboard handling
 
+### Currency Converter
+- **Location**: `components/currenyConvertor/CurrencyConvertor.tsx`
+- **Features**: Real-time currency conversion from Indian Rupees to multiple currencies
+- **Components Included**:
+  - **CurrencyButton** (`components/currenyConvertor/CurrencyButton.tsx`): Individual currency selection buttons with flag and name
+- **Concepts**: FlatList with multi-column layout, TextInput validation, Snackbar notifications, KeyboardAvoidingView, Pressable components
+
+### Roll Dice Component
+- **Location**: `components/rollDice/RollDice.tsx`
+- **Features**: Interactive dice rolling game with haptic feedback
+- **Components Included**:
+  - **Dice** (`components/rollDice/Dice.tsx`): Dice display component with images
+- **Concepts**: Random number generation, haptic feedback, image handling, TouchableOpacity interactions
+
 ## Key React Native Concepts Demonstrated
 
 - **Component Navigation**: State-based view switching without external navigation libraries
@@ -124,6 +138,9 @@ This app features a navigation-based structure with multiple components:
 - **KeyboardAvoidingView**: Automatically adjusts view when keyboard appears
 - **Platform**: Access platform-specific information (iOS/Android)
 - **StyleSheet**: Create optimized style objects
+- **FlatList**: Performant scrollable list component for large datasets
+- **Pressable**: Modern touchable component with advanced press handling
+- **Image**: Display images from various sources
 
 ### React (Hooks)
 - **useState**: Manage component state
@@ -134,6 +151,8 @@ This app features a navigation-based structure with multiple components:
 - **yup**: Schema validation for forms
 - **react-native-bouncy-checkbox**: Animated checkbox component
 - **react-native-safe-area-context**: Handle device safe areas
+- **react-native-haptic-feedback**: Provide haptic feedback on user interactions
+- **react-native-snackbar**: Display toast-like notifications
 
 ### Now what?
 
