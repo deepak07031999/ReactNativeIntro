@@ -3,9 +3,10 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useState } from 'react';
 import PasswordGenerator from './components/passwordGenerator/PasswordGenerator.tsx';
 import RollDice from './components/rollDice/RollDice.tsx';
+import CurrencyConvertor from './components/currenyConvertor/CurrencyConvertor.tsx';
 
 export default function Home (){
-  const [currentView, setCurrentView] = useState('rollDice');
+  const [currentView, setCurrentView] = useState('currencyConvertor');
 
   const renderContent = () => {
     switch(currentView) {
@@ -15,6 +16,8 @@ export default function Home (){
         return <PasswordGenerator onBack={() => setCurrentView('home')} />;
       case 'rollDice':
         return <RollDice onBack={()=>{setCurrentView('home')}}/>
+      case 'currencyConvertor':
+        return <CurrencyConvertor onBack={()=>{setCurrentView('home')}}/>
       default:
         return (
           <View style={styles.linkContainer}>
@@ -35,6 +38,12 @@ export default function Home (){
               style={[styles.button, styles.buttonGreen]}
             >
               <Text style={styles.linkText}>Roll The Dice</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => setCurrentView('currencyConvertor')}
+              style={[styles.button, styles.buttonPurple]}
+            >
+              <Text style={styles.linkText}>Currency Convertor</Text>
             </TouchableOpacity>
           </View>
         );
@@ -74,7 +83,9 @@ const styles = StyleSheet.create({
   buttonGreen: {
     backgroundColor: '#27AE60',
   },
-
+  buttonPurple: {
+    backgroundColor: '#9B59B6',
+  },
   linkText: {
     fontSize: 18,
     color: '#FFFFFF',

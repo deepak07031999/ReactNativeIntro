@@ -96,10 +96,7 @@ export default function PasswordGenerator(props: PasswordGeneratorProps){
           }}
           validationSchema={PasswordSchema}
           onSubmit={values => {
-            // same shape as initial values
-            console.log("values"+ values);
             generatePasswordString(+values.passwordLength);
-            console.log("password" + password);
           }}
         >
           {({ handleChange, handleBlur, handleSubmit, values, errors, touched }) => (
