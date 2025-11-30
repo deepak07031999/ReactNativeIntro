@@ -1,11 +1,10 @@
 import {
-  ScrollView,
   StatusBar,
   StyleSheet,
   useColorScheme,
 } from 'react-native';
 import { SafeAreaView, } from 'react-native-safe-area-context';
-import Home from './components/Home.tsx';
+import Home from './src/Home.tsx';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';

@@ -77,46 +77,63 @@ When you want to forcefully reload, for example to reset the state of your app, 
 
 You've successfully run and modified your React Native App. :partying_face:
 
-## Custom Components Added
+## App Structure
 
-This app includes several custom components demonstrating React Native concepts:
+This app features a navigation-based structure with multiple components:
 
-### FlatCards
-- **Location**: `components/FlatCards.tsx`
-- **Features**: Horizontal scrollable cards with different colors
-- **Concepts**: Flexbox layout, ScrollView, dynamic styling, map function
+### Home Component
+- **Location**: `components/Home.tsx`
+- **Features**: Main navigation hub with state management
+- **Concepts**: useState hook, conditional rendering, TouchableOpacity navigation
 
-### ElevatedCards
-- **Location**: `components/ElevatedCards.tsx`
-- **Features**: Cards with shadow effects and elevation
-- **Concepts**: Shadow properties (iOS), elevation (Android), gap spacing
+### Cards Section
+- **Location**: `components/Cards/Cards.tsx`
+- **Features**: Collection of different card components
+- **Components Included**:
+  - **FlatCards** (`components/Cards/FlatCards.tsx`): Horizontal scrollable cards
+  - **ElevatedCards** (`components/Cards/ElevatedCards.tsx`): Cards with shadow effects
+  - **FancyCards** (`components/Cards/FancyCards.tsx`): Cards with images and content
+  - **ActionCard** (`components/Cards/ActionCard.tsx`): Interactive cards with external links
+  - **ContactList** (`components/Cards/ContactList.tsx`): User profile listings
 
-### FancyCards
-- **Location**: `components/FancyCards.tsx`
-- **Features**: Cards with images, titles, and descriptions
-- **Concepts**: Image loading, error handling, card layouts, typography
-
-### ActionCard
-- **Location**: `components/ActionCard.tsx`
-- **Features**: Interactive card with external links and TouchableOpacity
-- **Concepts**: Linking API, TouchableOpacity, external URL handling
-
-### ContactList
-- **Location**: `components/ContactList.tsx`
-- **Features**: User profile list with GitHub avatars and status messages
-- **Concepts**: Array mapping, network images, user profiles, list layouts
+### Password Generator
+- **Location**: `components/passwordGenerator/PasswordGenerator.tsx`
+- **Features**: Complete password generation utility with customizable options
+- **Concepts**: Form validation with Yup, Formik form management, clipboard integration, keyboard handling
 
 ## Key React Native Concepts Demonstrated
 
-- **SafeAreaView**: Proper handling of device safe areas (notches, status bars)
+- **Component Navigation**: State-based view switching without external navigation libraries
+- **Props Interface**: TypeScript interfaces for component props
+- **SafeAreaView**: Proper handling of device safe areas using react-native-safe-area-context
 - **StyleSheet**: Organized styling with flexbox layout
-- **ScrollView**: Horizontal and vertical scrolling
-- **Image**: Network image loading with error handling
-- **TouchableOpacity**: Interactive button components
-- **Linking**: Opening external URLs and deep links
-- **Flexbox**: Layout management and responsive design
-- **Shadow/Elevation**: Platform-specific shadow effects
-- **Gap Property**: Modern spacing between flex items
+- **ScrollView**: Vertical scrolling containers
+- **TouchableOpacity**: Interactive button components with press handlers
+- **useState Hook**: State management for view switching
+- **Conditional Rendering**: Dynamic content based on state
+- **Component Composition**: Modular component architecture
+
+## Components Used by Library
+
+### React Native Core Components
+- **View**: Container component for layout and styling
+- **Text**: Display text content with styling options
+- **ScrollView**: Scrollable container for content that exceeds screen size
+- **TouchableOpacity**: Touchable wrapper with opacity feedback
+- **TextInput**: Input field for user text entry
+- **KeyboardAvoidingView**: Automatically adjusts view when keyboard appears
+- **Platform**: Access platform-specific information (iOS/Android)
+- **StyleSheet**: Create optimized style objects
+
+### React (Hooks)
+- **useState**: Manage component state
+
+### Third-Party Libraries
+- **@react-native-clipboard/clipboard**: Copy text to device clipboard
+- **formik**: Form state management and validation
+- **yup**: Schema validation for forms
+- **react-native-bouncy-checkbox**: Animated checkbox component
+- **react-native-safe-area-context**: Handle device safe areas
 
 ### Now what?
 

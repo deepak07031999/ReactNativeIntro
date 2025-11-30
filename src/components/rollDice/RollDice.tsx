@@ -1,17 +1,12 @@
-import FlatCards from './FlatCards.tsx';
-import ElevatedCards from './ElevatedCards.tsx';
-import FancyCards from './FancyCards.tsx';
-import ActionCard from './ActionCard.tsx';
-import ContactList from './ContactList.tsx';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-interface CardsProps {
+interface RollDiceProps {
   onBack: ()=>void;
 }
 
-export default function Cards(props: CardsProps){
+export default function RollDice(props: RollDiceProps){
   return(
-    <View>
+    <View style={styles.container}>
       <TouchableOpacity
         onPress={props.onBack}
         style={styles.backButton}
@@ -21,20 +16,17 @@ export default function Cards(props: CardsProps){
         </Text>
       </TouchableOpacity>
       <ScrollView style={styles.scrollView}>
-        <FlatCards/>
-        <ElevatedCards/>
-        <FancyCards/>
-        <ActionCard/>
-        <ContactList/>
+      <Text style={styles.titleText}>
+        Roll the dice
+      </Text>
       </ScrollView>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-  safeAreaView:{
+  container:{
     flex:1,
-    backgroundColor: '#6c6565'
   },
   scrollView: {
     flex:1,
@@ -43,11 +35,20 @@ const styles = StyleSheet.create({
   backButton:{
     padding: 10,
     margin: 10,
+    borderRadius: 25,
+    backgroundColor: '#4A90E2',
+    alignSelf: 'flex-start'
   },
   backText:{
     fontSize: 18,
     color: '#FFFFFF',
     textDecorationLine: 'underline',
     fontWeight: 'bold',
+  },
+  titleText:{
+    fontSize: 24,
+    color: '#FFFFFF',
+    textAlign: 'center',
+    fontWeight: 'bold'
   }
 })
